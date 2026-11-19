@@ -1,0 +1,175 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Manifest with Rose//December 2026//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Manifest with Rose
+BEGIN:VEVENT
+UID:new-moon-2026@manifestwithrose
+DTSTAMP:20261116T000000Z
+DTSTART:20261209T005200Z
+DTEND:20261209T010700Z
+SUMMARY:New moon in 2 hours. Choose your 12/12 wish.
+DESCRIPTION:New moons are for planting. Full moons are for letting go.\n\n
+ 1. One wish only. Write it in the present tense: "I have"\, not "I want".
+ \n2. Put the note where you will see it on the 12th.\n3. Don't tell anyon
+ e yet.\n\nListen: https://astromind2026-ship-it.github.io/rose-2027/liste
+ n/new-moon/
+URL:https://astromind2026-ship-it.github.io/rose-2027/listen/new-moon/
+CATEGORIES:New Moon
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:New moon in 2 hours. Choose your 12/12 wish.
+TRIGGER:-PT120M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:eve-1212-2026@manifestwithrose
+DTSTAMP:20261116T000000Z
+DTSTART:20261211T210000
+DTEND:20261211T211500
+SUMMARY:Tomorrow\, 12:12 happens twice.
+DESCRIPTION:Most people only catch one.\n\nTonight:\n1. Read your new-moon
+  wish once before bed.\n2. You don't need to set alarms. Both 12:12s are 
+ already in this calendar.\n3. Sleep. The first one comes while you rest.\
+ n\nListen: https://astromind2026-ship-it.github.io/rose-2027/listen/eve-1
+ 212/
+URL:https://astromind2026-ship-it.github.io/rose-2027/listen/eve-1212/
+CATEGORIES:12/12 Portal
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Tomorrow\, 12:12 happens twice.
+TRIGGER:-PT0M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:first-1212-2026@manifestwithrose
+DTSTAMP:20261116T000000Z
+DTSTART:20261212T001200
+DTEND:20261212T002700
+SUMMARY:12:12. The first one.
+DESCRIPTION:If you're awake: one slow breath in\, say the wish once\, go b
+ ack to sleep.\n\nIf you slept through this\, you are not late. The second
+  one is at noon.\n\nListen: https://astromind2026-ship-it.github.io/rose-
+ 2027/listen/first-1212/
+URL:https://astromind2026-ship-it.github.io/rose-2027/listen/first-1212/
+CATEGORIES:12/12 Portal
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:second-1212-2026@manifestwithrose
+DTSTAMP:20261116T000000Z
+DTSTART:20261212T121200
+DTEND:20261212T122700
+SUMMARY:12:12 in 2 minutes. Have your wish ready.
+DESCRIPTION:At 12:12 exactly:\n1. Read the wish out loud\, once.\n2. Say "
+ thank you" as if it is already done.\n\nThat's all. No ritual needed.\n\n
+ Listen: https://astromind2026-ship-it.github.io/rose-2027/listen/second-1
+ 212/
+URL:https://astromind2026-ship-it.github.io/rose-2027/listen/second-1212/
+CATEGORIES:12/12 Portal
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:12:12 in 2 minutes. Have your wish ready.
+TRIGGER:-PT2M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:night-1212-2026@manifestwithrose
+DTSTAMP:20261116T000000Z
+DTSTART:20261212T210000
+DTEND:20261212T211500
+SUMMARY:The last hours of 12/12. Don't spend them on a new wish.
+DESCRIPTION:Tonight is for the same wish\, not a longer list.\n\nFall asle
+ ep to the 12/12 Portal sleep track.\n\nListen: https://astromind2026-ship
+ -it.github.io/rose-2027/listen/night-1212/
+URL:https://astromind2026-ship-it.github.io/rose-2027/listen/night-1212/
+CATEGORIES:12/12 Portal
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:The last hours of 12/12. Don't spend them on a new wish.
+TRIGGER:-PT0M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:solstice-2026@manifestwithrose
+DTSTAMP:20261116T000000Z
+DTSTART:20261221T205000Z
+DTEND:20261221T210500Z
+SUMMARY:Solstice in 2 hours. The year turns here.
+DESCRIPTION:North of the equator this is the longest night. From here the 
+ light comes back.\n\n1. Name one thing you are done carrying.\n2. Write i
+ t down\, fold it once\, throw it away.\n3. Light a candle or a lamp and l
+ eave it on for ten minutes.\n\nListen: https://astromind2026-ship-it.gith
+ ub.io/rose-2027/listen/solstice/
+URL:https://astromind2026-ship-it.github.io/rose-2027/listen/solstice/
+CATEGORIES:Winter Solstice
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Solstice in 2 hours. The year turns here.
+TRIGGER:-PT120M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:cold-moon-2026@manifestwithrose
+DTSTAMP:20261116T000000Z
+DTSTART:20261224T012800Z
+DTEND:20261224T014300Z
+SUMMARY:Cold Moon peaks in 2 hours. Let one thing go before Christmas.
+DESCRIPTION:The last full moon of 2026\, and a supermoon. Full moons are f
+ or releasing\, not asking.\n\n1. Finish this sentence: "I am not taking _
+ __ into 2027."\n2. Say it once\, out loud.\n3. If the sky is clear\, look
+  at the moon. Thirty seconds counts.\n\nListen: https://astromind2026-shi
+ p-it.github.io/rose-2027/listen/cold-moon/
+URL:https://astromind2026-ship-it.github.io/rose-2027/listen/cold-moon/
+CATEGORIES:Cold Moon
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Cold Moon peaks in 2 hours. Let one thing go before Christmas.
+TRIGGER:-PT120M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:last-night-2026@manifestwithrose
+DTSTAMP:20261116T000000Z
+DTSTART:20261231T210000
+DTEND:20261231T211500
+SUMMARY:Three hours left in 2026. Don't make resolutions yet.
+DESCRIPTION:Tonight\, look back\, not forward.\n\n1. Write three things th
+ at worked out this year\, even small ones.\n2. Read them out loud.\n3. To
+ morrow is Night 1 of 21 Nights. It is already in this calendar.\n\nListen
+ : https://astromind2026-ship-it.github.io/rose-2027/listen/last-night/
+URL:https://astromind2026-ship-it.github.io/rose-2027/listen/last-night/
+CATEGORIES:Year End
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Three hours left in 2026. Don't make resolutions yet.
+TRIGGER:-PT0M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:night-1-2026@manifestwithrose
+DTSTAMP:20261116T000000Z
+DTSTART:20270101T210000
+DTEND:20270101T211500
+SUMMARY:Night 1 of 21.
+DESCRIPTION:Ten minutes before sleep\, at the same time\, for 21 nights.\n
+ \nTonight's track:\n\nListen: https://astromind2026-ship-it.github.io/ros
+ e-2027/listen/night-1/
+URL:https://astromind2026-ship-it.github.io/rose-2027/listen/night-1/
+CATEGORIES:21 Nights
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Night 1 of 21.
+TRIGGER:-PT0M
+END:VALARM
+END:VEVENT
+END:VCALENDAR

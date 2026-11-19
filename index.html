@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Manifest with Rose · December 2026</title>
+<meta name="description" content="A free December for your calendar: new moon, 12/12, solstice, Cold Moon. Reminders that arrive with the date.">
+<link rel="icon" href="assets/rose-monogram.png">
+<style>
+@font-face { font-family: "Playfair Display"; src: url(fonts/Playfair.ttf); font-weight: 400 900; font-style: normal; font-display: swap; }
+@font-face { font-family: "Playfair Display"; src: url(fonts/PlayfairItalic.ttf); font-weight: 400 900; font-style: italic; font-display: swap; }
+@font-face { font-family: Lora; src: url(fonts/Lora-Variable.ttf); font-weight: 400 700; font-style: normal; font-display: swap; }
+@font-face { font-family: Lora; src: url(fonts/Lora-Italic-Variable.ttf); font-weight: 400 700; font-style: italic; font-display: swap; }
+@font-face { font-family: "Bebas Neue"; src: url(fonts/Bebas.ttf); font-weight: 400; font-display: swap; }
+
+/* Tokens: Manifest with Rose design system. Dawn for reading pages, Night when the device is dark. */
+:root {
+  --surface-100: #faf0e6; --surface-200: #fcfaf7; --surface-300: #f6e4e2;
+  --ink: #3a2842; --ink-muted: #6b5470; --accent: #8a4a60; --kicker: #7a5c24;
+  --hairline: #ba9860; --action: #3a2842; --on-action: #faf0e6; --focus: #8a4a60;
+  --shadow-soft: 0 8px 32px rgba(58, 40, 66, .12);
+  --display: "Playfair Display", Georgia, serif;
+  --body: Lora, Georgia, serif;
+  --label: "Bebas Neue", "Arial Narrow", sans-serif;
+  --space-1: 4px; --space-2: 8px; --space-3: 16px; --space-4: 24px; --space-5: 48px; --space-6: 96px;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --surface-100: #140812; --surface-200: #2a1c30; --surface-300: #3a2842;
+    --ink: #faf0e6; --ink-muted: #c9b6c6; --accent: #eab8b3; --kicker: #fad88e;
+    --action: #fad88e; --on-action: #140812; --focus: #fad88e;
+    --shadow-soft: 0 8px 32px rgba(0, 0, 0, .45);
+    color-scheme: dark;
+  }
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--surface-100); color: var(--ink); font: 400 16px/26px var(--body); -webkit-font-smoothing: antialiased; }
+:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+.wrap { max-width: 960px; margin: 0 auto; padding: var(--space-5) max(16px, env(safe-area-inset-right)) var(--space-6) max(16px, env(safe-area-inset-left)); display: flex; flex-direction: column; gap: var(--space-6); }
+p { margin: 0; }
+h1, h2, h3 { font-family: var(--display); font-weight: 400; margin: 0; text-wrap: balance; }
+
+.kicker { display: flex; align-items: center; justify-content: center; gap: var(--space-3); font: 400 18px/20px var(--label); letter-spacing: .18em; color: var(--kicker); text-transform: uppercase; }
+.kicker::before, .kicker::after { content: ""; width: 40px; height: 1px; background: var(--hairline); }
+.mark { font: 400 14px/20px var(--display); letter-spacing: .3em; text-transform: uppercase; text-align: center; color: var(--ink-muted); }
+
+/* hero */
+.hero { display: flex; flex-direction: column; align-items: center; text-align: center; gap: var(--space-4); }
+.hero h1 { font-size: clamp(38px, 7vw, 64px); line-height: 1.08; max-width: 16ch; }
+.lede { font-size: 20px; line-height: 30px; color: var(--ink-muted); }
+.lede i { color: var(--hairline); font-style: normal; padding: 0 .4em; }
+.lede span { white-space: nowrap; }
+.btn { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: 0 var(--space-4); border-radius: 9999px; background: var(--action); color: var(--on-action); font: 600 16px/1 var(--body); text-decoration: none; border: 0; cursor: pointer; }
+.btn.quiet { background: transparent; color: var(--accent); border: 1px solid var(--hairline); }
+.actions { display: flex; flex-wrap: wrap; gap: var(--space-3); justify-content: center; }
+.fine { font-size: 13px; line-height: 20px; color: var(--ink-muted); max-width: 46ch; }
+
+/* phone + notification */
+.show { display: grid; grid-template-columns: minmax(0, 300px) minmax(0, 1fr); gap: var(--space-5); align-items: center; }
+.phone { width: 100%; max-width: 300px; aspect-ratio: 1290 / 2796; margin: 0 auto; border-radius: 40px; padding: 8px; background: #08040e; box-shadow: var(--shadow-soft); }
+.screen { position: relative; height: 100%; border-radius: 32px; overflow: hidden; background: #140812 url(wallpapers/dec-1212.png) center / cover; color: #faf0e6; }
+.lock-date { position: absolute; top: 9%; left: 0; right: 0; text-align: center; font: 600 13px/18px var(--body); opacity: .9; }
+.lock-time { position: absolute; top: 12%; left: 0; right: 0; text-align: center; font: 400 62px/1 var(--display); font-variant-numeric: lining-nums tabular-nums; }
+.note { position: absolute; left: 10px; right: 10px; bottom: 9%; padding: 10px 12px; border-radius: 12px; background: rgba(42, 28, 48, .82); backdrop-filter: blur(10px); font: 400 12px/17px var(--body); }
+.note b { display: block; font: 600 12px/16px var(--body); margin-bottom: 2px; }
+.note small { display: flex; justify-content: space-between; font-size: 10px; opacity: .7; margin-bottom: 3px; }
+.how { margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: var(--space-4); counter-reset: s; }
+.how li { counter-increment: s; display: grid; grid-template-columns: 56px minmax(0, 1fr); gap: var(--space-3); align-items: start; }
+.how li::before { content: counter(s); font: 400 40px/36px var(--label); letter-spacing: .04em; color: var(--accent); }
+.how b { display: block; font-family: var(--display); font-weight: 400; font-size: 22px; line-height: 30px; }
+.how span { color: var(--ink-muted); }
+
+/* calendar */
+.sec { display: flex; flex-direction: column; gap: var(--space-4); }
+.sec h2 { font-size: 40px; line-height: 46px; }
+.zones { display: flex; flex-wrap: wrap; gap: var(--space-2); }
+.chip { min-height: 40px; padding: 0 var(--space-3); border-radius: 9999px; border: 1px solid var(--hairline); background: transparent; color: var(--ink); font: 400 15px/1 var(--body); cursor: pointer; }
+.chip[aria-pressed="true"] { background: var(--action); color: var(--on-action); border-color: var(--action); }
+.cal { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: var(--space-4); align-items: start; }
+.grid { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 4px; background: var(--surface-200); padding: var(--space-3); border-radius: 12px; box-shadow: var(--shadow-soft); }
+.dow { text-align: center; font: 400 14px/24px var(--label); letter-spacing: .14em; color: var(--ink-muted); }
+.cell { aspect-ratio: 1; display: flex; align-items: center; justify-content: center; border-radius: 9999px; font-size: 15px; color: var(--ink-muted); }
+.cell.blank { visibility: hidden; }
+button.day { border: 0; background: var(--surface-300); color: var(--ink); cursor: pointer; font: 600 15px/1 var(--body); position: relative; }
+button.day[aria-pressed="true"] { background: var(--action); color: var(--on-action); }
+button.day small { position: absolute; bottom: 4px; width: 4px; height: 4px; border-radius: 50%; background: var(--accent); }
+button.day[aria-pressed="true"] small { background: var(--on-action); }
+.detail { background: var(--surface-200); border-radius: 12px; padding: var(--space-4); box-shadow: var(--shadow-soft); display: flex; flex-direction: column; gap: var(--space-3); }
+.detail h3 { font-size: 26px; line-height: 34px; }
+.detail .when { font: 400 18px/20px var(--label); letter-spacing: .12em; color: var(--kicker); }
+.detail pre { margin: 0; white-space: pre-wrap; font: inherit; color: var(--ink); }
+.detail a { color: var(--accent); }
+.detail .sep { height: 1px; background: var(--hairline); opacity: .5; border: 0; margin: 0; }
+
+/* upgrade */
+.next { background: var(--surface-300); border-radius: 12px; padding: var(--space-5) var(--space-4); text-align: center; display: flex; flex-direction: column; align-items: center; gap: var(--space-3); }
+.next h2 { font-size: 32px; line-height: 40px; max-width: 22ch; }
+.next .aff { font: italic 400 24px/36px var(--display); max-width: 26ch; }
+footer { text-align: center; font-size: 13px; color: var(--ink-muted); display: flex; flex-direction: column; gap: var(--space-2); align-items: center; }
+footer img { width: 56px; height: 56px; border-radius: 9999px; }
+
+@media (max-width: 720px) {
+  .show, .cal { grid-template-columns: minmax(0, 1fr); }
+  .wrap { gap: var(--space-5); }
+  .sec h2 { font-size: 32px; line-height: 38px; }
+}
+</style>
+</head>
+<body>
+<main class="wrap">
+
+<header class="hero">
+  <p class="mark">Manifest with Rose</p>
+  <p class="kicker">December 2026 · Free</p>
+  <h1>The right night, already in your calendar.</h1>
+  <p class="lede"><span>new moon</span><i>·</i><span>12/12</span><i>·</i><span>solstice</span><i>·</i><span>cold moon</span></p>
+  <div class="actions">
+    <a class="btn" href="rose_december_2026_sample.ics" download>Add December to my calendar</a>
+    <a class="btn quiet" href="#december">See what arrives</a>
+  </div>
+  <p class="fine">Nine reminders, each with a short note for that night. Tap the file on your phone and choose Add All. Nothing is billed, nothing renews.</p>
+</header>
+
+<section class="show" aria-label="What it looks like on your phone">
+  <div class="phone" role="img" aria-label="A lock screen showing a reminder: 12:12 in 2 minutes">
+    <div class="screen">
+      <div class="lock-date">Saturday, December 12</div>
+      <div class="lock-time">12:10</div>
+      <div class="note"><small><span>Calendar</span><span>now</span></small><b>12:12 in 2 minutes. Have your wish ready.</b>Tap to open tonight's note and the 12/12 audio.</div>
+    </div>
+  </div>
+  <ol class="how">
+    <li><div><b>It arrives on the date.</b><span>New moon, the 12/12 portal, solstice, the last full moon of the year: each one rings at the right moment, wherever you are.</span></div></li>
+    <li><div><b>Open it and everything is there.</b><span>A few lines for that night, and a link to Rose's audio. No app, no login.</span></div></li>
+    <li><div><b>The lock screen matches.</b><span>A wallpaper for the month, in the same light as the reminders.</span></div></li>
+  </ol>
+</section>
+
+<section class="sec" id="december">
+  <p class="kicker">Your December</p>
+  <h2>Nine dates, in your time.</h2>
+  <div class="zones" id="zones" role="group" aria-label="Time zone"></div>
+  <div class="cal">
+    <div class="grid" id="grid"></div>
+    <div class="detail" id="detail" aria-live="polite"></div>
+  </div>
+  <p class="fine">Moon and solstice reminders are set to the exact moment, so they shift with your time zone. The 12/12 and evening reminders stay at the same local time wherever you are.</p>
+</section>
+
+<section class="next">
+  <p class="kicker">2027</p>
+  <h2>The whole year, from January 1.</h2>
+  <p class="aff">I am already on the right night.</p>
+  <p class="fine">Every full moon, new moon, portal date, eclipse and retrograde of 2027, plus 21 Nights to begin the year. December stays yours either way.</p>
+  <a class="btn" href="#">See the 2027 calendar</a>
+</section>
+
+<footer>
+  <img src="assets/rose-monogram.png" alt="">
+  <p>manifest.with.rose</p>
+  <p>Reminders invite; they don't promise outcomes.</p>
+</footer>
+</main>
+
+<script>
+const EVENTS = [{"id": "new-moon", "kind": "New Moon", "utc": "2026-12-09T00:52:00Z", "alarm": 120, "title": "New moon in 2 hours. Choose your 12/12 wish.", "notes": "New moons are for planting. Full moons are for letting go.\n\n1. One wish only. Write it in the present tense: \"I have\", not \"I want\".\n2. Put the note where you will see it on the 12th.\n3. Don't tell anyone yet."}, {"id": "eve-1212", "kind": "12/12 Portal", "local": "2026-12-11T21:00", "alarm": 0, "title": "Tomorrow, 12:12 happens twice.", "notes": "Most people only catch one.\n\nTonight:\n1. Read your new-moon wish once before bed.\n2. You don't need to set alarms. Both 12:12s are already in this calendar.\n3. Sleep. The first one comes while you rest."}, {"id": "first-1212", "kind": "12/12 Portal", "local": "2026-12-12T00:12", "alarm": null, "title": "12:12. The first one.", "notes": "If you're awake: one slow breath in, say the wish once, go back to sleep.\n\nIf you slept through this, you are not late. The second one is at noon."}, {"id": "second-1212", "kind": "12/12 Portal", "local": "2026-12-12T12:12", "alarm": 2, "title": "12:12 in 2 minutes. Have your wish ready.", "notes": "At 12:12 exactly:\n1. Read the wish out loud, once.\n2. Say \"thank you\" as if it is already done.\n\nThat's all. No ritual needed."}, {"id": "night-1212", "kind": "12/12 Portal", "local": "2026-12-12T21:00", "alarm": 0, "title": "The last hours of 12/12. Don't spend them on a new wish.", "notes": "Tonight is for the same wish, not a longer list.\n\nFall asleep to the 12/12 Portal sleep track."}, {"id": "solstice", "kind": "Winter Solstice", "utc": "2026-12-21T20:50:00Z", "alarm": 120, "title": "Solstice in 2 hours. The year turns here.", "notes": "North of the equator this is the longest night. From here the light comes back.\n\n1. Name one thing you are done carrying.\n2. Write it down, fold it once, throw it away.\n3. Light a candle or a lamp and leave it on for ten minutes."}, {"id": "cold-moon", "kind": "Cold Moon", "utc": "2026-12-24T01:28:00Z", "alarm": 120, "title": "Cold Moon peaks in 2 hours. Let one thing go before Christmas.", "notes": "The last full moon of 2026, and a supermoon. Full moons are for releasing, not asking.\n\n1. Finish this sentence: \"I am not taking ___ into 2027.\"\n2. Say it once, out loud.\n3. If the sky is clear, look at the moon. Thirty seconds counts."}, {"id": "last-night", "kind": "Year End", "local": "2026-12-31T21:00", "alarm": 0, "title": "Three hours left in 2026. Don't make resolutions yet.", "notes": "Tonight, look back, not forward.\n\n1. Write three things that worked out this year, even small ones.\n2. Read them out loud.\n3. Tomorrow is Night 1 of 21 Nights. It is already in this calendar."}, {"id": "night-1", "kind": "21 Nights", "local": "2027-01-01T21:00", "alarm": 0, "title": "Night 1 of 21.", "notes": "Ten minutes before sleep, at the same time, for 21 nights.\n\nTonight's track:"}];
+const ZONES = [['America/New_York', 'New York'], ['America/Los_Angeles', 'Los Angeles'], ['Europe/London', 'London'], ['Asia/Tokyo', 'Tokyo']];
+let zone = (() => { try { const z = Intl.DateTimeFormat().resolvedOptions().timeZone; return ZONES.some(a => a[0] === z) ? z : ZONES[0][0]; } catch (e) { return ZONES[0][0]; } })();
+let picked = 12;
+
+function fmt(date, tz) {
+  const p = {};
+  new Intl.DateTimeFormat('en-US', { timeZone: tz, weekday: 'long', year: 'numeric', month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit' })
+    .formatToParts(date).forEach(x => { p[x.type] = x.value; });
+  return { y: +p.year, mon: p.month, d: +p.day, day: p.weekday + ', ' + p.month + ' ' + p.day, time: p.hour + ':' + p.minute + ' ' + p.dayPeriod };
+}
+function when(ev, tz) {
+  const exact = !!ev.utc;
+  const start = new Date(exact ? ev.utc : ev.local + ':00Z');
+  const z = exact ? tz : 'UTC';
+  return { s: fmt(start, z), alert: fmt(new Date(start.getTime() - ev.alarm * 60000), z).time };
+}
+function el(tag, cls, text) { const n = document.createElement(tag); if (cls) n.className = cls; if (text != null) n.textContent = text; return n; }
+
+function render() {
+  const byDay = {};
+  EVENTS.forEach(ev => { const w = when(ev, zone); if (w.s.y === 2026 && w.s.mon === 'Dec') (byDay[w.s.d] = byDay[w.s.d] || []).push({ ev, w }); });
+  if (!byDay[picked]) picked = byDay[12] ? 12 : +Object.keys(byDay)[0];
+
+  const zones = document.getElementById('zones'); zones.textContent = '';
+  ZONES.forEach(([id, name]) => {
+    const b = el('button', 'chip', name); b.type = 'button'; b.setAttribute('aria-pressed', String(id === zone));
+    b.onclick = () => { zone = id; render(); }; zones.appendChild(b);
+  });
+
+  const grid = document.getElementById('grid'); grid.textContent = '';
+  ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'].forEach(d => grid.appendChild(el('div', 'dow', d)));
+  for (let i = 0; i < 2; i++) grid.appendChild(el('div', 'cell blank'));   // Dec 1, 2026 is a Tuesday
+  for (let d = 1; d <= 31; d++) {
+    if (byDay[d]) {
+      const b = el('button', 'day', String(d)); b.type = 'button';
+      b.setAttribute('aria-pressed', String(d === picked)); b.setAttribute('aria-label', 'December ' + d + ', ' + byDay[d].length + ' reminder' + (byDay[d].length > 1 ? 's' : ''));
+      b.appendChild(el('small')); b.onclick = () => { picked = d; render(); }; grid.appendChild(b);
+    } else grid.appendChild(el('div', 'cell', String(d)));
+  }
+
+  const detail = document.getElementById('detail'); detail.textContent = '';
+  (byDay[picked] || []).forEach((x, i) => {
+    if (i) detail.appendChild(el('hr', 'sep'));
+    detail.appendChild(el('p', 'when', x.w.s.day + ' · ' + x.w.s.time));
+    detail.appendChild(el('h3', '', x.ev.title));
+    detail.appendChild(el('pre', '', x.ev.notes.replace(/\n\[.*\]$/, '')));
+    const a = el('a', '', 'Open the listening page'); a.href = 'listen/' + x.ev.id + '/'; detail.appendChild(a);
+  });
+}
+render();
+</script>
+</body>
+</html>
